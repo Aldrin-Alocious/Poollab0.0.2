@@ -34,7 +34,7 @@ def oplist(op):
   c='';
   for i in range(0,np.size(op)):
     c=str(c)+' '+str(op[i])
-  return c
+  return c.strip()
 def decode(ss):
   z=[];
   for i in range(0,ss.count('#')):
