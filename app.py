@@ -7,6 +7,8 @@ st.title("POOL LAB")
 df=pd.read_csv(st.file_uploader('Upload a CSV'))
 st.dataframe(df)
 dfz=df
+dfz1=df
+dfz2=df
 g=dfz[['Unnamed: 8']]
 g=g.to_numpy()
 g=np.array(g,ndmin=2)
@@ -16,11 +18,11 @@ h=np.array(h,ndmin=2)
 for i in range(1,np.size(g)):
   if g[i]=='Yes' or h[i]=='NRI' or h[i]=='TFW-Merit':
     dfz=dfz.drop([i])
+    dfz1=dfz1.drop([i])
+    dfz2=dfz2.drop([i])
 k=dfz[['Unnamed: 8']]
 k=k.to_numpy()
 dfz=dfz.reset_index(drop=True)
-dfz1=dfz
-dfz2=dfz
 st.dataframe(dfz)
 st.write(dfz1)
 st.write(dfz2)
