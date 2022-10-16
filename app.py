@@ -23,6 +23,8 @@ for i in range(1,np.size(g)):
 k=dfz[['Unnamed: 8']]
 k=k.to_numpy()
 dfz=dfz.reset_index(drop=True)
+dfz1=dfz2.reset_index(drop=True)
+dfz2=dfz2.reset_index(drop=True)
 st.dataframe(dfz)
 st.write(dfz1)
 st.write(dfz2)
